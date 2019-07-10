@@ -1,0 +1,374 @@
+%\documentclass[12pt,a4]{article}
+
+%\usepackage{amsmath}
+
+%\input{preamble}
+\documentclass[12pt,a4]{article}
+
+
+
+
+\usepackage{graphicx,boxedminipage,xcolor}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+%\usepackage[lined,boxed]{algorithm2e}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{solution}{Solution}
+
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+
+
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{exerciseD}[theorem]{*Exercise}
+\newtheorem{exerciseDD}[theorem]{**Exercise}
+
+\let\oldexercise\exercise
+\renewcommand{\exercise}{\oldexercise\normalfont}
+
+%\let\oldexerciseD\exerciseD
+%\renewcommand{\exerciseD}{\oldexerciseD\normalfont}
+
+%\let\oldexerciseDD\exerciseDD
+%\renewcommand{\exerciseDD}{\oldexerciseDD\normalfont}
+
+\newcommand{\E}{\mathbb{E}}
+%\newcommand{\nth}[1]{#1^{\textsuperscript{th}}}
+\newcommand{\scalar}[2]{\ensuremath{\langle #1, #2\rangle}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\nth}[1]{#1^{\textsuperscript{th}}}
+\newcommand{\core}{\textnormal{core}}
+
+
+
+\newif\ifsolution
+
+\solutionfalse
+
+\newcommand{\answer}[1]{
+\ifsolution
+{\color{blue} #1}
+\else
+\fi
+}
+
+
+
+\newcommand{\poly}{\textnormal{poly}}
+\newcommand{\quasipol}{\textnormal{quasipol}}
+\newcommand{\ssubexp}{\textnormal{stronglySubExp}}
+\newcommand{\wsubexp}{\textnormal{weaklySubExp}}
+\newcommand{\simplyexp}{\textnormal{E}}
+\newcommand{\expo}{\textnormal{Exp}}
+
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\nn}{\mathbb{N}_0^n}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+
+
+\date{}
+
+\title{
+\hbox{  Mathematical Foundations of Computer Science}
+  \vspace{3mm}
+{\normalsize CS 499,  Shanghai Jiaotong University,  Dominik Scheder\\
+%\vspace{3mm}
+Spring 2019}
+}
+
+\begin{document}
+
+\maketitle
+
+
+\setcounter{section}{1}
+
+\begin{itemize}
+ \item Homework assignment published on Thursday, 2019-03-07
+ \item Submit questions or first draft solutions by Sunday, 2019-03-10,  by
+ email to the TA and to me (dominik.scheder@gmail.com)
+ \item We will discuss some problems on Monday, 2019-03-11.
+ \item You will receive feedback by Wednesday, 2019-03-13.
+ \item Revise your solution and hand in your final submission by Sunday, 2019-03-17.
+\end{itemize}
+
+
+\section{Fibonacci Numbers and Other Recurrences}
+
+\subsection{Identities among the Fibonacci Numbers}
+
+
+\begin{exercise}
+    Prove the following identity:
+    \begin{align*}
+    \sum_{i=1}^{n} F_i = F_{n+2} - 1 \ .
+    \end{align*}
+    Actually, prove it twice:
+    \begin{enumerate}
+    \item Give an inductive proof.
+    \item Give a {\em combinatorial} argument. Remember that $F_{n+2} = |A_n|$, where
+    $A_n := \{ x \in \{0,1\}^n \ | \ x \textnormal{ does not contain 11} \}$. Find a way to partition
+    $A_n$ into sets such that the identity above becomes obvious.
+    \end{enumerate}
+\end{exercise}
+
+%==================================Begin 2.1=====================================
+\begin{solution} \quad
+       \begin{enumerate}
+          \item We first give the inductive proof.
+          
+          \textbf{Basis Step:} For $n=0$, we have 
+          $$
+          \sum_{i=1}^0F_i=0=F_2-1.
+          $$
+        
+
+         \textbf{Induction Hypothesis:} Assume that the statement is true for some $k\geq0$. Then we have $F_1+F_2+\cdots+F_k=F_{k+2}-1$.
+
+         \textbf{Proof of Induction Step:} Remember that we have $F_{k+2}+F_{k+1}=F_{k+3}$ derived from the definition of the Fibonacci number. For $k+1$, we can derive that
+         \begin{align*}
+            \sum_{i=1}^{k+1}F_i=\sum_{i=1}^kF_i+F_{k+1}
+            =F_{k+2}-1+F_{k+1}=F_{k+3}-1,
+         \end{align*}
+         which means that the statement holds true for $k+1$.
+
+         \item We can see that the set $A_n$ can be  divided as 
+         $$
+         A_n=\{x\in\{ 0,1\}^n\ |\ 0y, y\in A_{n-1}\  \text{or}\ 10z,z\in A_{n-2} \}.
+         $$ 
+         And $A_{n-1},\cdots,A_2$ can further be divided recursively. Let us view the sequence from left to right, so $|A_{n-2}|$ equals to the number of such sequences in $A_n$ that ``1'' first appears at the very beginning. And $|A_{n-3}|$ equals to the number of such sequences in $A_n$ that ``1'' first appears at the second place. This pattern continues until we have that $|A_0|$ equals to the number of such sequences in $A_n$ that ``1'' first appears at the last but one place.
+
+         In this case we have two sequences left in $A_n$, one sequence is where ``1'' first appears at the last place, the other is where there is only ``0''s. That means 
+         $$
+         \sum_{i=0}^{n-2}|A_i|=|A_n|-2=F_{n+2}-2.
+         $$
+          We also have that 
+         $$
+         \sum_{i=1}^nF_i=F_1+\sum_{i=2}^nF_i=F_1+\sum_{i=0}^{n-2}|A_i|,
+         $$ 
+         where $F_1$ equals $1$. Therefore
+         $$
+         \sum_{i=1}^nF_i=1+F_{n+2}-2=F_{n+2}-1.
+         $$
+       \end{enumerate}
+    \end{solution}
+%==================================End 2.1=====================================
+
+\begin{exercise}
+   Prove the following identity:
+   \begin{align*}
+      F_1 + F_3 + F_5 + \cdots + F_{2n+1} = F_{2n+2} \ .
+   \end{align*}
+   Again, give two proofs, one using induction on $n$ and one using a combinatorial argument 
+   involving the sets $A_i$.
+\end{exercise}
+
+%==================================Begin 2.2=====================================
+\begin{solution}\quad
+   \begin{enumerate}
+      \item Inductive proof.
+      
+      \textbf{Basis Step:} For $n=0$, we have 
+      $$
+      \sum_{i=0}^0F_{2i+1}=1=F_2.
+      $$
+    
+
+     \textbf{Induction Hypothesis:} Assume that the statement is true for some $k\geq0$. Then we have $F_1+F_3+\cdots+F_{2k+1}=F_{2k+2}$.
+
+     \textbf{Proof of Induction Step:} Remember that we have $F_{k+2}+F_{k+1}=F_{k+3}$ derived from the definition of the Fibonacci number. For $k+1$, we can derive that
+     \begin{align*}
+        \sum_{i=0}^{k+1}F_{2i+1}=\sum_{i=0}^kF_{2i+1}+F_{2k+3}
+        =F_{2k+2}+F_{2k+3}=F_{2k+4},
+     \end{align*}
+     which means that the statement holds true for $k+1$.
+
+     \item Similar with Exercise 2.1, which divides $A_n$ according to the number of continuous 0. In Exercise 2.2, we divides $A_n$ according to the number of continuous ``10".     
+     $$
+     A_n=\{x\in\{ 0,1\}^n\ |\ 0y, y\in A_{n-1}\  \text{or}\ 10z,z\in A_{n-2} \}.
+     $$ 
+     In last exercise, the subset `` $0y, y\in A_{n-1}$" is further divided to smaller subsets, while the subset `` $10z,z\in A_{n-2}$" is kept. For formula in Exercise 2.2, we will keep `` $0y, y\in A_{n-1}$" and divide `` $10z,z\in A_{n-2}$" to smaller subsets recursively.
+     
+     To be specific, `` $10z,z\in A_{n-2}$" can be divided as `` $100y, y\in A_{n-3}$" and `` $1010z,z\in A_{n-4}$". We keep `` $100y, y\in A_{n-3}$" and further divide `` $1010z,z\in A_{n-4}$", and so on. Finally, $A_n$ can be divided to subsets `` $0y, y\in A_{n-1}$",`` $100y, y\in A_{n-3}$",`` $10100y, y\in A_{n-5}$",$\cdots$.
+     
+  Therefore, $|A_{2n-1}|$ equals to the number of such sequences in $A_{2n}$ that no ``10'' appears at the very beginning. And $|A_{2n-3}|$ equals to the number of such sequences in $A_{2n}$ that one ``10'' first appears at the second place. This pattern continues until we have that $|A_1|$ equals to the number of such sequences in $A_2n$ that n-1 continuous ``10'' appears at the beginning.
+  
+     In this case we have one sequence left in $A_2n$ when the recurrence comes to the end, which is ``$1010\cdots101$". That means:
+     $$
+     \sum_{i=0}^{n-2}|A_{2i+1}|+1=\sum_{i=0}^{n-2}|A_{2i+1}|+F_1=|A_{2n}|.
+     $$
+  Therefore
+     $$
+     \sum_{i=0}^{n}F_{2i+1}=F_{2n+2}.
+     $$
+   \end{enumerate}
+\end{solution}
+%==================================End 2.2=====================================
+
+\subsection{General Linear Recurrences}
+
+For $a_1,\dots,a_k \geq 0$ we can consider the recursively defined numbers:
+
+\begin{align*}
+\begin{array}{lll}
+    F_n  = &  f_n & \textnormal{if $n < k$} \\
+    F_n =  &a_1 F_{n-1} + a_2 F_{n-2} + \cdots + a_k F_{n-k} &  \textnormal{if $n \geq k$}\ .
+    \end{array}
+\end{align*}
+The values $f_0, \dots, f_{k-1}$ are the ``start values'' of the recurrence. For example, if we set $k=1$, $f_0=1$, and
+$a_1 = 2$ then $F_n = 2^n$; setting $k=2$, $f_0=0$, $f_1=1$, and $a_2 = a_1 = 1$ yields the Fibonacci numbers.
+As with the Fibonacci numbers, we can write the recursion in matrix-vector form:
+\begin{align*}
+    \begin{pmatrix} F_n \\ F_{n-1} \\ \vdots \\ F_{n-k+1}\end{pmatrix} &  =
+    &
+    \begin{pmatrix} a_1 & a_2 & a_3 & \cdots & a_{k-2} & a_{k-1} &  a_k \\
+                                 1 & 0     &  0 & \cdots &0 &  0 & 0\\
+                                  0 & 1    & 0 & \cdots &0 & 0& 0\\
+                                  \vdots   & \vdots      &  \vdots & \cdots &\vdots &  \vdots & \vdots \\
+                                  0  & 0  & 0  & \cdots & 0 & 1 & 0 
+    \end{pmatrix} \cdot
+     \begin{pmatrix}
+     F_{n-1} \\ F_{n-2} \\ \vdots \\ F_{n-k}
+     \end{pmatrix}
+\end{align*}
+Let us denote the matrix by $A$. 
+\begin{exercise}
+     Show that $\lambda$ is an eigenvalue of $A$ if and only if 
+     \begin{align}
+     \lambda^k = a_1  \lambda^{k-1} +a_2  \lambda^{k-2} + \cdots + a_{k-2} \lambda^2 + a_{k-1} \lambda + a_k \ . 
+     \label{charpol}
+     \end{align}
+     For an eigenvalue $\lambda$, show what the corresponding eigenvector is.
+     \textbf{Hint.} You can do this by computing $\det(A- \lambda I)$. But there is a simpler way by thinking
+     directly in terms of what eigenvectors are.
+\end{exercise}
+
+%==================================Begin 2.3=====================================
+\begin{proof} \item
+  We assume that $\lambda$ is an eigenvalue and the corresponding eigenvector is $\boldsymbol x$. With the assumption, we can have and only have $A \boldsymbol x=\lambda \boldsymbol x$, in which $\boldsymbol x=(x_1,x_2,x_3,\cdots,x_n)$. Then we have $(A -\lambda E)\boldsymbol x=\boldsymbol 0$.
+
+\begin{align*}
+  \begin{pmatrix} a_1-\lambda & a_2 & a_3 & \cdots & a_{k-2} & a_{k-1} &  a_k \\
+                               1 & -\lambda    &  0 & \cdots &0 &  0 & 0\\
+                                0 & 1    & -\lambda & \cdots &0 & 0& 0\\
+                                \vdots   & \vdots      &  \vdots & \cdots &\vdots &  \vdots & \vdots \\
+                                0  & 0  & 0  & \cdots & 0 & 1 & -\lambda
+  \end{pmatrix} \cdot
+  \begin{pmatrix}
+  x_{1} \\ x_{2} \\x_{3}\\ \vdots \\ x_{k}
+  \end{pmatrix} =
+  \begin{pmatrix}
+  0 \\ 0 \\0\\ \vdots \\ 0
+  \end{pmatrix}
+\end{align*}
+
+$$ \left\{
+\begin{array}{lcl}
+(a_{1}-\lambda)x_{1}+a_{2}x_{2}+\cdots+a_{k}x_{k}=0      \\
+x_{1}-\lambda x_{2}=0\\
+x_{2}-\lambda x_{3}=0\\
+ \qquad \vdots\\
+x_{k-1}-\lambda x_{k}=0
+
+\end{array} \right. $$
+
+Since $x_{1},x_{2},\cdots,x_{k} \ne 0$, we have$$\lambda=\frac{x_{1}}{x_{2}}=\cdots=\frac{x_{k-1}}{x_{k}}$$
+So we can obtain
+$$ \left\{
+\begin{array}{lcl}
+
+x_{1}=\lambda^{k-1} x_{k}\\
+x_{2}=\lambda^{k-2} x_{k}\\
+\qquad \vdots \\
+x_{k-1}=\lambda^{1} x_{k}\\
+
+\end{array} \right. $$
+
+Then we have
+$$[(a_{1}-\lambda)\lambda^{k-1}+a_{2}\lambda^{k-2}+\cdots+a_{k}]x_{k}=0$$
+
+For $x_{k} \ne 0$, we obtain $$(a_{1}-\lambda)\lambda^{k-1}+a_{2}\lambda^{k-2}+\cdots+a_{k}=0$$
+
+That is exactly
+\begin{align}
+\lambda^k = a_1  \lambda^{k-1} +a_2  \lambda^{k-2} + \cdots + a_{k-2} \lambda^2 + a_{k-1} \lambda + a_k \ .
+\label{charpol}
+\end{align}
+
+The corresponding eigenvector is
+\begin {align*}
+\boldsymbol x=
+\begin{pmatrix}
+\lambda_{k-1} \\ \lambda_{k-2} \\\lambda_{k-3}\\ \vdots \\ \lambda_{0}
+\end{pmatrix}
+\end{align*}
+\end{proof}
+%==================================End 2.3=====================================
+
+\begin{exercise}
+   Recall that $a_1,\dots,a_k \geq 0$. Assume further that $a_1 + \cdots + a_k > 1$. Show that
+   among the solutions to (\ref{charpol}), there is exactly one solution $\lambda_1$ with $\lambda_1 > 0$,
+   and this $\lambda_1$ is actually greater than $1$.
+\end{exercise}
+
+%==================================Begin 2.4=====================================
+\begin{proof} \quad
+  \begin{enumerate}
+    \item Prove that there exist one eigenvalue $\lambda_1$ with $\lambda_1 > 0$. \par
+    Construct function:
+    \begin{align*}
+    f(\lambda) = \lambda^k - a_1  \lambda^{k-1} -a_2  \lambda^{k-2} - \cdots - a_{k-2} \lambda^2 - a_{k-1} \lambda - a_k.
+    \end{align*}
+    Substitute $1$ into $f(\lambda)$, then we have $f(1) = 1 - a_1 - \cdots - a_k < 0$. \
+    Substitute $a_1 + \cdots + a_k$ into $f(\lambda)$,
+    \begin{align*}
+    f(\sum\limits_{i = 1}^ka_i) &= (\sum\limits_{i = 1}^ka_i)^k - a_1  (\sum\limits_{i = 1}^ka_i)^{k-1} - \cdots - a_{k-1} \sum\limits_{i = 1}^ka_i - a_k \\
+    &= (a_1 + \cdots + a_k)(\sum\limits_{i = 1}^ka_i)^{k-1} - a_1  (\sum\limits_{i = 1}^ka_i)^{k-1} - \cdots - a_{k-1} \sum\limits_{i = 1}^ka_i - a_k \\
+    &=a_2 (\sum\limits_{i = 1}^ka_i)^{k-2} (\sum\limits_{i = 1}^ka_i - 1) + a_3 (\sum\limits_{i = 1}^ka_i)^{k-3} ((\sum\limits_{i = 1}^ka_i)^2 - 1)  \\ 
+    & + \cdots + a_k ((\sum\limits_{i = 1}^ka_i)^{k-1} - 1) > 0.
+    \end{align*}
+    Since $f(\lambda)$ is obviously continuous on $[1 , \sum\limits_{i = 1}^ka_i ]$, according to the zero point theorem, we have that there exists one solution $\lambda_1$ to $f(\lambda) = 0$ with $\lambda_1 > 1$.
+    \item Prove that $\lambda_1$ is the unique positive root. \par
+    Assume that there exists at least another positive root named $\lambda_2$. \\
+    We have $p  \lambda_1 = \lambda_2$, with $p =  \frac{\lambda_2}{\lambda_1} > 0$.
+    \begin{enumerate}
+      \item $p > 1$, then we have:
+      \begin{align*}
+      f(\lambda_2) = f(p\lambda_1) &= (p\lambda_1)^k - a_1(p\lambda_1)^{k-1} - \cdots - a_k \\
+      &= \lambda_1^k p^k - a_1 \lambda_1^{k-1} p^{k-1} - \cdots - a_k \\
+      &< (\lambda_1^k - a_1 \lambda_1^{k-1} - \cdots - a_k) p^k = 0
+      \end{align*}
+      Therefore $f(\lambda_2) < 0$, which contradicts the assumption that $\lambda_2$ is one solution.
+      \item $0 < p < 1$, then we have:
+      \begin{align*}
+      f(\lambda_2) = f(p\lambda_1) &= (p\lambda_1)^k - a_1(p\lambda_1)^{k-1} - \cdots - a_k \\
+      &= \lambda_1^k p^k - a_1 \lambda_1^{k-1} p^{k-1} - \cdots - a_k \\
+      &> (\lambda_1^k - a_1 \lambda_1^{k-1} - \cdots - a_k) p^k = 0
+      \end{align*} 
+      Therefore $f(\lambda_2) > 0$, which contradicts the assumption that $\lambda_2$ is one solution.
+    \end{enumerate}
+    We have derived a contradiction, which allows us to conclude that our original assumption is false.
+  \end{enumerate}
+\end{proof}
+%==================================End 2.4=====================================
+
+
+\end{document}

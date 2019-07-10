@@ -1,0 +1,449 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.5)  18 MAR 2019 08:41
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**hw01_navigator_final
+(./hw01_navigator_final.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./preamble.tex
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/boxedminipage/boxedminipage.s
+ty) (c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks26
+\float@box=\box28
+\@float@everytoks=\toks27
+\@floatcapt=\box29
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count101
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/algorithmicx/algpseudocode.st
+y
+Package: algpseudocode 
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count102
+\c@ALG@rem=\count103
+\c@ALG@nested=\count104
+\ALG@tlm=\skip49
+\ALG@thistlm=\skip50
+\c@ALG@Lnr=\count105
+\c@ALG@blocknr=\count106
+\c@ALG@storecount=\count107
+\c@ALG@tmpcounter=\count108
+\ALG@tmplength=\skip51
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+\c@theorem=\count109
+
+
+LaTeX Warning: Unused global option(s):
+    [a4].
+
+(./hw01_navigator_final.aux)
+\openout1 = `hw01_navigator_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen114
+\scratchbox=\box30
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen115
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks30
+) (c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+ (c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+
+(c:/ProgramPool/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: No \author given.
+
+) [1
+
+{c:/ProgramPool/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (16.20381pt too wide) in paragraph at lines 23--23
+[]\OT1/cmr/bx/n/17.28 Broken Chess-board and Jump-ing With Coins 
+ []
+
+<figures/checkerboard-without-corners.pdf, id=9, 545.49022pt x 450.0815pt>
+File: figures/checkerboard-without-corners.pdf Graphic file (type pdf)
+<use figures/checkerboard-without-corners.pdf>
+Package pdftex.def Info: figures/checkerboard-without-corners.pdf  used on inpu
+t line 30.
+(pdftex.def)             Requested size: 155.99762pt x 128.70721pt.
+<figures/checkerboard-without-corners-colored.png, id=10, 551.05875pt x 543.697
+92pt>
+File: figures/checkerboard-without-corners-colored.png Graphic file (type png)
+<use figures/checkerboard-without-corners-colored.png>
+Package pdftex.def Info: figures/checkerboard-without-corners-colored.png  used
+ on input line 44.
+(pdftex.def)             Requested size: 155.99762pt x 153.9102pt.
+<figures/checkerboard-8x8-damaged.pdf, id=11, 450.0815pt x 434.82451pt>
+File: figures/checkerboard-8x8-damaged.pdf Graphic file (type pdf)
+<use figures/checkerboard-8x8-damaged.pdf>
+Package pdftex.def Info: figures/checkerboard-8x8-damaged.pdf  used on input li
+ne 52.
+(pdftex.def)             Requested size: 155.99762pt x 150.70464pt.
+[2 <./figures/checkerboard-without-corners.pdf> <./figures/checkerboard-without
+-corners-colored.png>]
+<figures/checkerboard-damaged-numbered.jpg, id=20, 340.27126pt x 338.26375pt>
+File: figures/checkerboard-damaged-numbered.jpg Graphic file (type jpg)
+<use figures/checkerboard-damaged-numbered.jpg>
+Package pdftex.def Info: figures/checkerboard-damaged-numbered.jpg  used on inp
+ut line 73.
+(pdftex.def)             Requested size: 155.99762pt x 155.07674pt.
+ [3 <./figures/checkerboard-8x8-damaged.pdf> <./figures/checkerboard-damaged-nu
+mbered.jpg>]
+<figures/coins-2.pdf, id=27, 485.07233pt x 201.017pt>
+File: figures/coins-2.pdf Graphic file (type pdf)
+<use figures/coins-2.pdf>
+Package pdftex.def Info: figures/coins-2.pdf  used on input line 90.
+(pdftex.def)             Requested size: 155.99762pt x 64.64574pt.
+<figures/two.jpg, id=28, 219.44484pt x 60.60141pt>
+File: figures/two.jpg Graphic file (type jpg)
+<use figures/two.jpg>
+Package pdftex.def Info: figures/two.jpg  used on input line 98.
+(pdftex.def)             Requested size: 155.99762pt x 43.08092pt.
+<figures/coins-3.pdf, id=29, 547.86696pt x 349.40738pt>
+File: figures/coins-3.pdf Graphic file (type pdf)
+<use figures/coins-3.pdf>
+Package pdftex.def Info: figures/coins-3.pdf  used on input line 109.
+(pdftex.def)             Requested size: 195.0pt x 124.36304pt.
+<figures/three.jpg, id=30, 219.44484pt x 118.94438pt>
+File: figures/three.jpg Graphic file (type jpg)
+<use figures/three.jpg>
+Package pdftex.def Info: figures/three.jpg  used on input line 118.
+(pdftex.def)             Requested size: 195.0pt x 105.69681pt.
+ [4 <./figures/coins-2.pdf> <./figures/two.jpg> <./figures/coins-3.pdf>]
+<figures/coins-4.pdf, id=47, 534.48897pt x 348.48393pt>
+File: figures/coins-4.pdf Graphic file (type pdf)
+<use figures/coins-4.pdf>
+Package pdftex.def Info: figures/coins-4.pdf  used on input line 127.
+(pdftex.def)             Requested size: 195.0pt x 127.13441pt.
+
+Overfull \hbox (29.43585pt too wide) in paragraph at lines 135--136
+\OT1/cmr/m/n/12 can give each coin of the black square a co-or-di-nate, which i
+s $(0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (0
+\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (1\OML/
+cmm/m/it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (1\OML/cmm/m
+/it/12 ; \OT1/cmr/m/n/12 1)$
+ []
+
+[5 <./figures/three.jpg> <./figures/coins-4.pdf>]
+<figures/four1.jpg, id=55, 406.79814pt x 213.08475pt>
+File: figures/four1.jpg Graphic file (type jpg)
+<use figures/four1.jpg>
+Package pdftex.def Info: figures/four1.jpg  used on input line 140.
+(pdftex.def)             Requested size: 234.00238pt x 122.57153pt.
+ [6 <./figures/four1.jpg>]
+<figures/Venn1.png, id=59, 290.0436pt x 133.4586pt>
+File: figures/Venn1.png Graphic file (type png)
+<use figures/Venn1.png>
+Package pdftex.def Info: figures/Venn1.png  used on input line 183.
+(pdftex.def)             Requested size: 195.0pt x 89.72836pt.
+
+[7 <./figures/Venn1.png>]
+Overfull \hbox (82.26979pt too wide) detected at line 215
+[]
+ []
+
+
+Overfull \hbox (90.76717pt too wide) detected at line 244
+[]
+ []
+
+[8]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 249.
+
+[9] [10]
+Overfull \hbox (2.98466pt too wide) in paragraph at lines 320--321
+[]\OT1/cmr/m/n/12 By that anal-ogy, $\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OM
+S/cmsy/m/n/12 f\OML/cmm/m/it/12 a; c; d; e; f\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12
+ ; A[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a; b; d; e; f\OMS/c
+msy/m/n/12 g\OML/cmm/m/it/12 ; A[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm
+/m/it/12 a; b; c; e; f\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (10.67442pt too wide) in paragraph at lines 329--335
+[]\OT1/cmr/m/n/12 In the spirit of the pre-vi-ous ques-tions, let us call a se-
+quence $(\OML/cmm/m/it/12 a[]; a[]; [] ; a[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
+2
+ []
+
+<figures/venn2.png, id=82, 1927.2pt x 1927.2pt>
+File: figures/venn2.png Graphic file (type png)
+<use figures/venn2.png>
+Package pdftex.def Info: figures/venn2.png  used on input line 347.
+(pdftex.def)             Requested size: 155.99762pt x 155.97296pt.
+[11]
+Overfull \hbox (19.1311pt too wide) in paragraph at lines 364--365
+[]\OT1/cmr/m/n/12 So, in the-ory, those equa-tions have a fixed so-lu-tion give
+n a cer-tain $(\OML/cmm/m/it/12 a[]; [] ; a[]\OT1/cmr/m/n/12 )$.
+ []
+
+[12 <./figures/venn2.png>] [13] (./hw01_navigator_final.aux) ) 
+Here is how much of TeX's memory you used:
+ 3607 strings out of 492649
+ 49041 string characters out of 6127709
+ 122528 words of memory out of 5000000
+ 7414 multiletter control sequences out of 15000+600000
+ 12750 words of font info for 49 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 43i,15n,35p,1064b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/ProgramPool/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/ProgramPoo
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Program
+Pool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Prog
+ramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Pr
+ogramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/
+ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c
+:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy6.pfb><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb><c:/ProgramPool/texlive/2018/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on hw01_navigator_final.pdf (13 pages, 1743745 bytes).
+PDF statistics:
+ 141 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

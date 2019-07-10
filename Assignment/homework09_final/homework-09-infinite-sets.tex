@@ -1,0 +1,171 @@
+\documentclass[12pt,a4]{article}
+
+
+
+\input{preamble}
+
+
+
+\setcounter{section}{8}
+
+
+\begin{center}
+  \large\textbf{Group: navigator} 
+\end{center}
+\begin{center}
+  \begin{tabular}{rl}
+ Xu Huan  & 517021910724 \\
+ Tianyao Shi     &     517021910623 \\
+Chenxiao Yang    &    517021910540  \\
+Jiaqi  Zeng      &     517021910882  \\
+  \end{tabular}
+\end{center}
+\newpage
+
+
+
+\section{Infinite Sets}
+
+In the lecture (and the lecture notes) we have showed that $\N \times \N \cong \N$, i.e.,
+there is a bijection $f: \N \times \N \rightarrow \N$. From this, and by induction, it follows
+quite easily that $\N^k \cong \N$ for every $k$.
+
+\begin{exercise}
+   Consider $\N^*$, the set of all finite sequences of natural numbers, that is,
+   $\N^* = \{\epsilon\} \cup \N \cup \N^2 \cup \N^3 \cup \dots$. Here,
+   $\epsilon$ is the empty sequence. Show that $\N \cong \N^*$ by defining
+   a bijection $\N \rightarrow \N^*$.
+\end{exercise}
+
+
+% -----------------------------------------------------------------------------------
+\textbf{Solution.} As we know, there are infinite prime numbers. Given $k \in \N$, we can reflect it as the $k^{th}$ smallest prime number, which we denote as $p_k$. For example:
+$$p_1 = 2,\quad p_2=3, \quad p_3= 5$$
+We define the following reflection from $x\in \N $ to $ \N^*$.
+$$\begin{aligned}
+	&x := x+1\\
+	\text{if } &x= 1\text{, then $x\Rightarrow \epsilon$}\\
+	&x = p_1^{c_1} p_2^{c_2} \cdots p_r^{c_r}\text{ , where $c_r>0$ and $c_1, c_2,\cdots, c_{r-1}\geq 0$}\\
+	\text{let } &y = (c_1, c_2, \cdots, c_{r-1}, c_r-1) \in \N^r\\
+	&x\Rightarrow y
+\end{aligned}
+$$ 
+We subtract $1$ from $c_r$ in case the last dimension of $y$ is $0$. It can help distinguish $(x_1,x_2)$ and $(x_1,x_2,0)$. For example:
+$$83\Rightarrow 84\Rightarrow2^2 3^1 5^0 7^1 \Rightarrow (2,1,0,0)\in \N^4$$
+$$(2,1,0)\Rightarrow 2^2 3^1 5^1 \Rightarrow 60\Rightarrow 59$$
+It's easy to see that this conversion is bijection between $\N$ and $\N^*$.    
+% -----------------------------------------------------------------------------------
+
+\begin{exercise}
+   Show that $R \cong R \times R$. \textbf{Hint:} Use the fact that 
+   $R \cong \{0,1\}^{\N}$ and thus show that $\{0,1\}^{\N} \cong \{0,1\}^{\N} \times \{0,1\}^{\N}$.
+\end{exercise}
+
+\textbf{Proof.}  We first prove this lemma: \emph{For sets $A,B,C$ and $D$, if $A\cong C$, $B\cong D$, then $A\times B\cong C\times D$.}
+
+Since $A\cong C$, $B\cong D$, there exists bijection $f: A\rightarrow C$ and $g: B\rightarrow D$. Let $h: A\times B\rightarrow C\times D$, $h(<x,y>)=<f(x),g(y)>$, then it's easy to see that $h$ is a bijection. Therefore $A\times B\cong C\times D$.
+
+Then we show that  $\{0,1\}^{\N} \cong \{0,1\}^{\N} \times \{0,1\}^{\N}$. Suppose $x\in \{0,1\}^{\N}=(x_0x_1x_2x_3\cdots)$, let $f:\{0,1\}^{\N} \rightarrow \{0,1\}^{\N} \times \{0,1\}^{\N}$, $f(x)=(x_0x_2x_4\cdots,x_1x_3x_5\cdots)$.
+\begin{enumerate}
+   \item $f$ is an injection. $\forall x,y \in \{0,1\}^{\N_0}$ with $x\neq y$, $\exists i\in\N$ s.t. $x_i\neq y_i$. Without loss of generality, suppose $i$ is an odd number, then $f(x)=(x_0x_2x_4\cdots,x_1x_3x_5\cdots x_i\cdots)\neq(y_0y_2y_4\cdots,y_1y_3y_5\cdots y_i\cdots)=f(y)$.
+   \item $f$ is a surjection. $\forall (x,y)\in  \{0,1\}^{\N} \times \{0,1\}^{\N}=(x_0x_1x_2\cdots,y_0y_1y_2\cdots)$, $\exists z=(x_0y_0x_1y_1x_2y_2\cdots) \in  \{0,1\}^{\N}$ s.t. $f(z)=(x,y)$.
+\end{enumerate}
+Therefore $f$ is a bijection, and $\{0,1\}^{\N} \cong \{0,1\}^{\N} \times \{0,1\}^{\N}$. Recall the fact that  $R \cong \{0,1\}^{\N}$, according to the lemma, we have $R \times R \cong \{0,1\}^{\N} \times \{0,1\}^{\N}$. Then according to the transitivity of $\cong$ relation, we have  $R \cong \{0,1\}^{\N} \cong \{0,1\}^{\N} \times \{0,1\}^{\N}\cong R \times R$.\qed
+
+\begin{exercise}
+  Consider $\R^{\N}$, the set of all infinite sequences $(r_1, r_2, r_3,\dots)$ of real numbers.
+  Show that $\R \cong \R^{\N}$. \textbf{Hint:} Again, use the fact that $\R \cong \{0,1\}^{\N}$.
+\end{exercise}
+
+\textbf{Proof.} Remember the fact that $\R \cong \{0,1\}^{\N}\cong 2^{\N}$. That is to say, each real number is a function $f:\N\rightarrow\{0,1\}$, and $\R$ is the set of all functions from $\N\rightarrow\{0,1\}$. $\R^{\N}$ is therefroe a sequence of such functions.
+
+Let function $g$ be that $g:\N\times\N\rightarrow\{0,1\}$, $\mathcal{G}:g(m,n)=f_n(m)$, where $f_n:\N\rightarrow\{0,1\}$ is a function as well as a real number, and the subscript $n$ means that it is the $n$-th element in the real number sequence. Let us denote the set of functions from $\N\times\N\rightarrow\{0,1\}$ as $A$, then $\mathcal{G}$ is a bijection between $A$ and $\R^{\N}$. 
+\begin{enumerate}
+   \item For two different functions $g_1,g_2$, $\exists (m,n)\in \N\times\N$ s.t. $g_1(m,n)\neq g_2(m,n)$, accordingly we have $f_n(m)_1\neq f_n(m)_2$, which means different real numbers as the $n$-th element in the sequence, leading to different sequences. Therefore $\mathcal{G}$ is injective.
+   \item For any sequence in $\R^{\N}$, we can construct a function $g:\N\times\N\rightarrow\{0,1\}$, by following $g(m,n)=f_n(m)$. That is to say, $\mathcal{G}$ is surjective.
+\end{enumerate}
+
+Also recall that $\N\cong\N\times\N$, thus there is a bijection $h:\N\rightarrow\N\times\N$. Then there is a bijection from the set of functions $f:\N\rightarrow\{0,1\}$ to $A$, the set of functions $g:\N\times\N\rightarrow\{0,1\}$, the former of which is just $\R$ and the latter of which $\cong R^{\N}$. Therefore $\R\cong\R^{\N}$.\qed
+
+
+\begin{exercise}
+  Let $\mathcal{F}$ be the set of all {\em continuous} functions $f: \R \rightarrow \R$. Show that
+  $\mathcal{F} \cong \R$.
+\end{exercise}
+
+
+\begin{proof}
+	The cardinality of $\mathcal{F}$ is at least $|\R|$ because every real number corresponds to a constant function. \\
+	Suppose $f: \R \rightarrow \R$ is a continuous function. Let $x \in \R$. Then there is a Cauchy sequence of rational numbers such that $\lim_{n \to \infty}q_{n}=x$. Continuity of $f$ means that $\lim_{n\to\infty}f(q_n) = f(\lim_{n\to\infty}q_n)=f(x).$ \\
+	This implies that the values of $f$ at rational numbers already determine $f$. In other words, the mapping $\Phi$: $\mathcal{F} \rightarrow \mathbb{R}^{\mathbf{Q}}$ is an injection, which means $|\mathcal{F}| \le |\mathbb{R}^{\mathbf{Q}}|$. Notice that $|\mathbb{R}^{\mathbf{Q}}| = |{2^{\mathbf{N}}}^{\mathbf{N}}| = |2^{\mathbf{N} \times \mathbf{N}}| = |2^{\mathbf{N}}| = |\R|$. Hence, the cardinality of $\mathcal{F}$ is at most $|\R|$. \\
+	By the Schröder-Bernstein Theorem, we have that $\mathcal{F} \cong \R$.
+\end{proof}
+
+
+
+
+
+Next, let us view $\{0,1\}^{\N}$ as a partial ordering: given two elements $\mathbf{a}, \mathbf{b} \in \{0,1\}^{\N}$,
+that is, sequences $\mathbf{a} = (a_1,a_2,\dots)$ and $\mathbf{b} = (b_1,b_2,\dots)$, we define
+$\mathbf{a} \leq \mathbf{b}$ if $a_i \leq b_i$ for all $i \in \N$. Clearly,
+$(0,0,\dots)$ is the minimum element in this ordering and $(1,1,\dots)$ the maximum.\\
+
+\begin{exercise}
+   Give a countably infinite chain in $\{0,1\}^{\N}$. Remember that a set $A$ is countably infinite
+   if $A \cong \N$.
+\end{exercise}
+
+\begin{proof}
+  Assume $x \in \N$, we create a sequence $00\cdots 011\cdots 1$, in which there are $x$ 1's. In this way, $1 \rightarrow 2 \rightarrow 3 \cdots$ is corresponding to $00\cdots 001 \rightarrow 00\cdots 011 \rightarrow 00\cdots 0111 \rightarrow \cdots$ and this makes a countably infinite chain in $\{0,1\}^{\N}$.
+\end{proof}
+
+\begin{exercise}
+   Find a countably infinite antichain in $\{0,1\}^{\N}$.
+\end{exercise}
+
+\begin{proof}
+  Given $x \in \N$, we create a sequence $00\cdots 010\cdots 0$, in which 1 is in the last $x^{th}$ digit of this sequence. In this way, $1 \rightarrow 2 \rightarrow 3 \rightarrow \cdots$ is corresponding to $00\cdots 001 \rightarrow 00\cdots 010 \rightarrow 00\cdots 0100 \rightarrow \cdots$ and this makes a countably infinite antichain in $\{0,1\}^{\N}$.
+\end{proof}
+
+\begin{exercise}
+   Find an uncountable antichain in $\{0,1\}^{\N}$. That is, an antichain $A$ with $A \cong \R$.
+\end{exercise}
+
+\begin{proof}
+  For the number $0$, we corresponding create a sequence $100\cdots 00$.
+
+  Now we exclude $0$ from the following steps. Given $a,b \in \N$ and $a,b$ are mutually prime and $a<b$, we consider four situations: (1)$+\frac{a}{b}$ (2) $-\frac{a}{b}$ (3) $+\frac{b}{a}$ (4) $-\frac{b}{a}$. \par
+
+  First we create a sequence in which the $(a+1)^{th}$ and $(b+1)^{th}$ digits are 1. \par
+  Second, we consider the following four digits after the latter 1 of the two. For case (1), the four digits are $1000$. For case (2), the four digits are $0100$. For case (3), the four digits are $0010$. For case (4), the four digits are $0001$.\par
+  Third, set all other digits to $0$.
+
+  For example, given $a=3$, $b=5$.\par
+  $\frac{3}{5} \rightarrow 0001011000\cdots$\par
+  $-\frac{3}{5} \rightarrow 0001010100\cdots$\par
+  $\frac{5}{3} \rightarrow 00010100100\cdots$\par
+  $-\frac{5}{3} \rightarrow 000101000100\cdots$\par
+
+  In this way, we can construct an uncountable antichain in $\{0,1\}^{\N}$.
+\end{proof}
+
+
+\begin{exerciseDD}
+   Find an uncountable chain in $\{0,1\}^{\N}$. That is, a chain $A$ with $A \cong \R$.
+\end{exerciseDD}
+
+
+\begin{exerciseDD}
+   Find a set $X \subseteq 2^{\N}$ (that is, $X$ is a set of subsets of $\N$) such that
+   (1) every $x \in X$ is an infinite subset of $\N$, (2) $x \cap y$ is finite whenever $x, y \in X$ 
+   are distinct, (3) $X$ is uncountable.
+\end{exerciseDD}
+
+
+
+
+
+\end{document}
+
+
+
