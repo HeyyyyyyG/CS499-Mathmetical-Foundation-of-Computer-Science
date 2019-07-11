@@ -15,3 +15,7 @@ Discrete mathematic course in SJTU by Prof. Dominik Scheder
 10. Network flow
 11. Matchings and Multi-commodity Flow
 
+## Final exam
+
+- 2017
+- 2018
